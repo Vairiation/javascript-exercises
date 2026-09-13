@@ -8,8 +8,8 @@ const fibonacci = function(countArg) {
         count = countArg
     }
 
-    if (count < 0) return "OOPS";
     if (count == 0) return 0;
+    if (!count || count < 0) return "OOPS";
 
     let firstPrev = 1;
     let secondPrev = 0;
@@ -23,6 +23,8 @@ const fibonacci = function(countArg) {
     return firstPrev;
 
 };
+
+console.log(fibonacci('hello'))
 
 // Another way to do it is by using an iterative approach with an array containing two values, 0 and 1.
 // const fib = [0, 1];
